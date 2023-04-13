@@ -1,0 +1,379 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+  /* Set the z-index of the background to a higher value */
+  z-index: 0;
+}
+
+/* Set the z-index of the div to a lower value */
+.alert-card {
+  width: auto;
+  height: auto;
+  transition: all 0.3s ease; /* add transition effect for smoother animation */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #ffffff;
+  border: #cccccc;
+  z-index: -1; /* set a negative z-index value */
+  /* display: none; hide the div by default */
+}
+
+/* Show the div when a button is pressed */
+.dot {
+  transition: all 0.5s ease; /* add transition effect for smoother animation */
+  visibility: hidden;
+}
+
+.dot h2, .dot p {
+  color: #f5f5f5;
+}
+
+.dot button {
+  display: none;
+}
+
+.disappear {
+  visibility: hidden;
+}
+
+/* Style form element */
+#myForm {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Style form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Style form label */
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style form input */
+.form-group input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Style form button */
+#submitBtn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#submitBtn:hover {
+  background-color: #3e8e41;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#timer-container {
+  display: flex;
+  align-items: center;
+}
+
+#timer-container h3 {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+#timer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #dc143c;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #timer {
+    font-size: 1.5rem;
+  }
+}
+
+/* Main Content */
+
+main {
+  margin-top: 100px;
+  padding: 1rem;
+}
+
+#score {
+  font-weight: bold;
+}
+
+#chart {
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+}
+
+#play-again {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+#play-again:hover {
+  background-color: #3e8e41;
+}
+
+.button-container {
+  text-align: center;
+}
+
+#quiz-container {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  align-items: center;
+}
+
+#question-container {
+  margin-bottom: 1rem;
+}
+
+#question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center; /* added property */
+}
+
+#answer-buttons {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.answer-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.answer-button:hover {
+  background-color: #dcdcdc;
+}
+
+.answer-button.correct {
+  background-color: green;
+}
+
+.answer-button.wrong {
+  background-color: red;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#start-button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #dc143c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#next-button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #c29b1b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#start-button:hover {
+  background-color: #fc0c04;
+}
+
+#next-button:hover {
+  background-color: #fce304;
+}
+
+#chart-container {
+  width: 50%;
+  margin: auto;
+  display: grid;
+  align-items: center;
+}
+
+#chart-card {
+  /* background-color: #ffffff; */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* #chart {
+  width: 100%;
+} */
+
+@media only screen and (max-width: 600px) {
+  #chart-container {
+    width: 90%;
+  }
+}
+
+
+#score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  margin-top: 1rem;
+}
+
+#score-container h3 {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+#score {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #dc143c;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+input[type="text"], input[type="tel"] {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:focus:invalid {
+  outline: none;
+}
