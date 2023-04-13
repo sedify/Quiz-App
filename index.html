@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Quiz</h1>
+      <div id="timer-container">
+        <h3>Time Left:</h3>
+        <p id="timer">00:00</p>
+      </div>
+    </header>
+    <main>
+
+      <div class="alert-card dot" role="alert" aria-hidden="true" id="alert-card">
+        <h2>Congratulations!</h2>
+        <p><span id="user_name"></span>, you have completed the quiz.</p>
+        <p>Your score is: <span id="score"></span></p>
+        <canvas id="chart"></canvas>
+        <div class="button-container">
+          <button id="play-again">Retry Test?</button>
+        </div>
+      </div>
+
+      <form id="myForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="index">Index Number:</label>
+          <input type="text" id="index" name="index" required>
+        </div>
+        <button type="submit" id="submitBtn">Submit</button>
+      </form>
+      
+      <div id="quiz-container" class="disappear">
+        <div id="question-container">
+          <p id="question"></p>
+          <ul id="answer-buttons">
+            <li><button class="answer-button"></button></li>
+            <li><button class="answer-button"></button></li>
+            <li><button class="answer-button"></button></li>
+            <li><button class="answer-button"></button></li>
+          </ul>
+        </div>
+        <div id="controls">
+          <button id="start-button">Start</button>
+          <button id="next-button" style="display:none;">Next</button>
+        </div>
+        
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
