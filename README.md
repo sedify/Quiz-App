@@ -4,7 +4,7 @@ The code creates an HTML form that collects candidate details, starts a countdow
 
 ![Homepage](/assets/user_details.png)
 
-
+<br><br>
 ## Tasks to complete.
 
 - [x] <b>Add a timer to keep track of the time taken to complete the quiz</b>
@@ -23,9 +23,9 @@ To shuffle the questions, you can create an array of questions and use the Fishe
 
 To change the 'start' button to 'next' when moving to the next question, you can create a function to change the text of the button and add an event listener to it. 
 
-<div style="display:flex;">
-  <img src="/assets/start_quiz.png" style="width:50%;">
-  <img src="/assets/correct.png" style="width:50%;">
+<div style="display:flex; align-item: center;">
+  <span><img src="/assets/start_quiz.png" style="width:50%;"></span>
+  <span><img src="/assets/correct.png" style="width:50%;"></span>
 </div>
 
 In the function, you can change the text of the button to 'Next' and set its display to 'none'. Then, when the user selects an answer, you can set the display of the 'Next' button to 'block'.
@@ -51,8 +51,9 @@ To add a pie chart, you can use a JavaScript chart library like Chart.js. You ca
 - [x] <b>Include fields for the student's name and number to identify who has taken the quiz</b>
 
 
-
+<br><br>
 ## In script.js file
+<br><br>
 The code starts by defining variables `form`, `username`, and `index`. The `form` variable selects the HTML form element with the ID `myForm`. The `username` and `index` variables are initialized to empty strings.
 
 An event listener is added to the form that listens for the `submit` event. When the form is submitted, the event listener's callback function is called. This function first prevents the form from submitting normally using `e.preventDefault()` and then retrieves the form data using the `FormData` object. The function then calls the `processCandidate` function and passes the form data as a parameter. The `processCandidate` function assigns values to the `username` and `index` variables based on the form data.
